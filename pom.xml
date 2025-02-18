@@ -74,13 +74,15 @@
       </plugin>
 
       <plugin>
-        <!-- Unit tests are run by surefire. -->
-        <!-- Classes under src/test/java called *Test are included automatically. -->
-        <!-- Unit tests are run during the test phase. -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.0</version>
+        <configuration>
+          <debug>true</debug>
+          <forkCount>1</forkCount>
+         </configuration>
       </plugin>
+
       <plugin>
         <!-- Integration tests are run by failsafe. -->
         <!-- Classes under src/test/java called *IT are included automatically. -->
